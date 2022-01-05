@@ -29,8 +29,21 @@ class Calculator extends React.Component {
     const buttonNames = ['AC', '+/-', '%', '÷', '7', '8', '9', 'x', '4', '5',
       '6', '-', '1', '2', '3', '+', '0', '.', '='];
     const buttons = [];
-    buttonNames.forEach((buttonName) => {
-      buttons.push(<Button handleClick={this.handleClick} buttonName={buttonName} />);
+    buttonNames.forEach((buttonName, index) => {
+      if ((index + 1) % 4 === 0) {
+        buttons.push(
+          <Button
+            key={buttonName}
+            handleClick={this.handleClick}
+            buttonName={buttonName}
+            isOrange
+          />,
+        );
+      } else {
+        buttons.push(
+          <Button key={buttonName} handleClick={this.handleClick} buttonName={buttonName} />,
+        );
+      }
     });
 
     return (
