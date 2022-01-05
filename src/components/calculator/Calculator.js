@@ -1,36 +1,55 @@
 import React from 'react';
 import './calculator.css';
-// import PropTypes from 'prop-types';
+import calculate from '../../logic/calculate';
+import Button from '../button/Button';
 
 class Calculator extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = { calc: {} };
+    this.handleClick = this.handleClick.bind(this);
+  }
+
+  handleClick(e) {
+    const { calc } = this.state;
+    const buttonName = e.target.name;
+    const newCalc = calculate(calc, buttonName);
+    this.setState({ calc: newCalc });
   }
 
   render() {
+    const {
+      calc: {
+        total,
+        next,
+        operation,
+      },
+    } = this.state;
+    const display = ((total || '') + (operation || '') + (next || '')) || '0';
+    const buttonNames = ['AC', '+/-', '%', '÷', '7', '8', '9', 'x', '4', '5',
+      '6', '-', '1', '2', '3', '+', '0', '.', '='];
+    const buttons = [];
+    buttonNames.forEach((buttonName, index) => {
+      if ((index + 1) % 4 === 0) {
+        buttons.push(
+          <Button
+            key={buttonName}
+            handleClick={this.handleClick}
+            buttonName={buttonName}
+            isOrange
+          />,
+        );
+      } else {
+        buttons.push(
+          <Button key={buttonName} handleClick={this.handleClick} buttonName={buttonName} />,
+        );
+      }
+    });
+
     return (
       <div id="calculator">
-        <p id="input">0</p>
-        <button type="button" id="ac">AC</button>
-        <button type="button" id="plus-minus">+/-</button>
-        <button type="button" id="percent">%</button>
-        <button type="button" className="Operations" id="div">÷</button>
-        <button type="button" id="btn-7">7</button>
-        <button type="button" id="btn-8">8</button>
-        <button type="button" id="btn-9">9</button>
-        <button type="button" className="Operations" id="mult">x</button>
-        <button type="button" id="btn-4">4</button>
-        <button type="button" id="btn-5">5</button>
-        <button type="button" id="btn-6">6</button>
-        <button type="button" className="Operations" id="minus">-</button>
-        <button type="button" id="btn-1">1</button>
-        <button type="button" id="btn-2">2</button>
-        <button type="button" id="btn-3">3</button>
-        <button type="button" className="Operations" id="plus">+</button>
-        <button type="button" id="btn-0">0</button>
-        <button type="button" id="dot">.</button>
-        <button type="button" className="Operations" id="equal">=</button>
+        <p id="input">{display}</p>
+        {buttons}
       </div>
     );
   }
