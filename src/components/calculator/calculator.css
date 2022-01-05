@@ -24,7 +24,7 @@
   font-size: 1.3rem;
 }
 
-#btn-0 {
+button[name="0"] {
   grid-column-start: 1;
   grid-column-end: 3;
 }
@@ -34,8 +34,4 @@
   background-color: rgb(243, 243, 243);
   font-family: sans-serif;
   font-size: 1rem;
-}
-
-.Operations {
-  background-color: orange !important;
 }
