@@ -31,7 +31,12 @@ const Calculator = () => {
       );
     } else {
       buttons.push(
-        <Button key={buttonName} handleClick={handleClick} buttonName={buttonName} />,
+        <Button
+          key={buttonName}
+          handleClick={handleClick}
+          buttonName={buttonName}
+          isOrange={false}
+        />,
       );
     }
   });

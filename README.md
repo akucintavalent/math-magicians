@@ -2,9 +2,16 @@
 
 # Math magicians
 
-Calculator is an app built to calculate simple mathematical operations. It is built using React and CSS.
+Calculator is an app built to calculate simple mathematical operations. It is built using React and CSS. It has three pages:
 
-![image](./screenshot.png)
+ - Home page
+![home](./screenshots/home_screenshot.png)
+
+ - Calculator page
+![calculator](./screenshots/calculator_screenshot.png)
+
+ - Random quote page
+![quote](./screenshots/quote_screenshot.png)
 
 ## Built With
 
