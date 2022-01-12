@@ -1,8 +1,5 @@
 import calculate from '../logic/calculate';
 
-// const a = ['AC', '+/-', '%', '÷', '7', '8', '9', 'x', '4', '5',
-//   '6', '-', '1', '2', '3', '+', '0', '.', '='];
-
 describe('calculate()', () => {
   test('multiplication', () => {
     let state = {};
