@@ -5,3 +5,9 @@
   justify-content: space-between;
   padding: 2rem;
 }
+
+@media (max-width: 576px) {
+  .calculatorContainer {
+    flex-direction: column;
+  }
+}
