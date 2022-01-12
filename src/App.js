@@ -3,6 +3,7 @@ import { Route, Routes } from 'react-router-dom';
 import CalculatorContainer from './components/calculator-container/CalculatorContainer';
 import Navbar from './components/navbar/Navbar';
 import Home from './components/home/Home';
+import Quote from './components/quotes/Quote';
 
 class App extends React.Component {
   constructor(props) {
@@ -17,6 +18,7 @@ class App extends React.Component {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="calculator" element={<CalculatorContainer />} />
+          <Route path="quote" element={<Quote />} />
         </Routes>
       </>
     );
