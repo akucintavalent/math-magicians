@@ -1,7 +1,8 @@
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
-import Calculator from './components/calculator/Calculator';
+import CalculatorContainer from './components/calculator-container/CalculatorContainer';
 import Navbar from './components/navbar/Navbar';
+import Home from './components/home/Home';
 
 class App extends React.Component {
   constructor(props) {
@@ -14,7 +15,8 @@ class App extends React.Component {
       <>
         <Navbar />
         <Routes>
-          <Route path="/" element={<Calculator />} />
+          <Route path="/" element={<Home />} />
+          <Route path="calculator" element={<CalculatorContainer />} />
         </Routes>
       </>
     );

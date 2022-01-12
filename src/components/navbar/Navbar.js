@@ -4,7 +4,7 @@ import styles from './Navbar.module.css';
 const Navbar = () => (
   <div className={styles.NavBar}>
     <h1>Math Magicians</h1>
-    <nav>
+    <nav className={styles.NavTag}>
       <NavLink to="/" className={({ isActive }) => (isActive ? styles.NavLinkActive : null)}>Home</NavLink>
       |
       <NavLink to="calculator" className={({ isActive }) => (isActive ? styles.NavLinkActive : null)}>Calculator</NavLink>
