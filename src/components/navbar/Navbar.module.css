@@ -1,0 +1,11 @@
+
+.NavLinkActive {
+  color: violet;
+}
+
+.NavBar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 1rem 0;
+}
