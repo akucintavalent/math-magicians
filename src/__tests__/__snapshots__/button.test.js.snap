@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<button
+  className=""
+  name="AC"
+  onClick={[Function]}
+  type="button"
+>
+  AC
+</button>
+`;
+
+exports[`test text button renders correctly 1`] = `
+<button
+  className=""
+  name="AC"
+  onClick={[Function]}
+  type="button"
+>
+  AC
+</button>
+`;
