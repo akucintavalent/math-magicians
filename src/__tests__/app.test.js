@@ -16,7 +16,7 @@ describe('App component', () => {
     expect(container.querySelector('p')).toBeTruthy();
   });
 
-  test('Check home component', async () => {
+  test('Quote Component', async () => {
     const { container } = render(<App />);
     await userEvent.click(screen.getByText('Quote'));
     expect(container.querySelector('h2')).toBeTruthy();
