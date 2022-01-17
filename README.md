@@ -13,6 +13,12 @@ Calculator is an app built to calculate simple mathematical operations. It is bu
  - Random quote page
 ![quote](./screenshots/quote_screenshot.png)
 
+## Live links
+
+- [Heroku](https://math-magicians-akucintavalent.herokuapp.com/)
+
+- [Netlify](https://quirky-kepler-6d9f5c.netlify.app/)
+
 ## Built With
 
 - Major languages: JavaScript
